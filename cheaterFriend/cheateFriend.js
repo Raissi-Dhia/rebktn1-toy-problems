@@ -17,3 +17,21 @@
 //
 // Example:
 // removNb(26) should return [ {15, 21}, {21, 15} ]
+
+//this might take a lot of time .. but we need to itterate over all the numbers and try to multiply evrey number by all numbers and if it checks the conditions which is equal to sum without those two numbers w return it .. in case there's no case fitting the conditions we just return nothing 
+
+function removeNb (n) {
+  var sum = 0 ;
+  	for ( i = 1; i <= n; i++){
+    	sum = sum + i ;
+ }
+ 		 for(i = 1; i <= n; i++){
+     for(j = i + 1; j <= n; j++){
+      if(i * j  === sum - ( i + j)){
+        
+        return [Object.values({i, j}), Object.values({j, i})]
+      }
+   }
+ }
+ 		 return null;
+}
