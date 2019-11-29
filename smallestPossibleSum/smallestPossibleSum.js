@@ -28,3 +28,24 @@
 // Additional notes:
 
 // There are performance tests consisted of very big numbers and arrays of size at least 30000. Please write an efficient algorithm to prevent timeout.
+
+//i think in this case we are going to itterate over the array and check each time if the number is bigger thna the next number  , we substract the second from the first one and we add it and we keep doing this untill the condition isn't checked (maybe we should use recursion) 
+//once the condition isn't check we move to the next numbers and so on .. once there's no number that checks the condition we calculate the sum of the modified array and return it .. couldn't implement my ideas but ill try to refactor later 
+
+function sum(nums) {
+	var total = 0
+
+
+  if (nums.length === 1){ 
+  	return nums[0]
+  	 };
+ 
+  for (var i = 0; i < nums.length; i++) {
+    if (nums[i] > nums[i + 1]) {
+      nums[i] = nums[i] - nums[i + 1];
+      total += i 
+    }
+  }
+
+return total ; 
+}
