@@ -14,9 +14,32 @@ and true if the number is more than or equal to x, false if not:
 
 (6, 'EvHB8KN8ik8BiyxfeyKBmiCMj') ---> ['B88B', false];
 
-x will always be a positive integer, and s will never be empty
+x will always be a positive integer, and s will never be empty 
 
 - regular expression is not allow 
-
+//first we need to loop through our string and push all the b's and 8s to an array  and than we need to match every 8 and b to have pairs and get rid of the solo if exists and than check if the length of the array is 
+//smaller than the nbr given in the parameter return false else we return true push the pairs joined as a string and the truth condition to an array and return it .
 
 */
+function pairs(string, nbr) {
+	var array = []; 
+
+	for (var i = 0; i < string.length; i++){
+		// if (string.inculdes('B') && string.inculdes('8')){
+			if (string[i] === 'B'){
+				array.push(string[i])
+			}
+			if (string[i] === '8'){
+				array.push(string[i])
+			}
+		}
+	// }
+	array.join('') ;
+	if(array[0].length * 2 < nbr){
+		 array.push('false')
+	}else{
+		array.push('true')
+	}
+		return array ; 
+
+}
