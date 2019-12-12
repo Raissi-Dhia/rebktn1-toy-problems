@@ -12,4 +12,23 @@
   *
   */
 var deepEquals = function(apple, orange) {
+	var len = Object.keys(apple).length ;
+	var len1 =  Object.keys(orange).length;
+	var result = true;
+
+	if(typeof (apple) !== 'object' && typeof (orange) !== 'object'){
+    return apple === orange;
+  }
+    if(len !== len1){
+    return false;
+  } 
+  	for(var key in apple){
+  		let key1 = apple[key]
+  		let key2 = orange[key]
+    if(deepEquals(key1, key2) !== true){
+      	
+      	result = false;
+    }
+  }
+  		return result;
 };
