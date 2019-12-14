@@ -20,5 +20,5 @@ function parseQueryString (url) {
 	for (var i = 0 ; i < newUrl.length ; i ++ ) {
 		result.push(newUrl[i].split('='))
 	}
-	return finalResult.push(result) 
+	return result.push(result) 
 }
