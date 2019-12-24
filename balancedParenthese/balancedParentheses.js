@@ -12,13 +12,13 @@ var isBalanced = function(str) {
 	var count = 0 ; 
 
 	for (i = 0; i < str.length; i++) {
-		if (count > 0) {
+		if (count < 0) {
 			return false
 		}
-		if (str[i] === '('){
+		else if (str[i] === '('){
 			count = count +1;
 		}
-		if (str[i] === ')') {
+		 else if (str[i] === ')') {
 			count = count - 1; 
 		}
 		
