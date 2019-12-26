@@ -14,4 +14,12 @@
 
 var allAnagrams = function(string) {
   // Your code here.
+  var anagrams = [] ;
+  var remaining = allAnagrams(string.substr(0, i) + string.substr(i + 1))
+  for (var i = 0; i < string.length; i++) {
+	 for (var j = 0; i < remaining.length; j++){
+	 	anagrams.push(string[i] + remaining[j]);
+	 }	
+  }
+  return anagrams;
 };

@@ -18,7 +18,7 @@
 *
 */
 
-var rockPaperScissors = function (
+var rockPaperScissors = function (number
 ) {
   // TODO: your solution here
 };
