@@ -25,4 +25,16 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-var insertionSortList = function(head) {};
+var insertionSortList = function(head) {
+   
+    for(var i = 1; i < head.length; i++){
+    for(var j = 0; j < i; j++){
+      if(head[j] > head[i]){
+        head.splice(i, 1);
+        head.splice(j, 0, head[i]);
+      } 
+    }
+   }
+   return head;
+  
+};
